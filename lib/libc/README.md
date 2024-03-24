@@ -1,4 +1,3 @@
 # Jink C Standard Library.
 
-Version : alpha
-
+Version : 0.1
