@@ -2,9 +2,9 @@ include .config
 
 AR=${JINK_CONFIG_COMPILER_AR}
 
-drivers_makefiles := drivers/video/vga/Makefile
+drivers_makefiles := drivers/video/vga/Makefile drivers/audio/pcspeaker/Makefile
 
-drivers_objects := drivers/video/vga/vga.o
+drivers_objects := drivers/video/vga/vga.o drivers/audio/pcspeaker/pcspeaker.o
 
 
 all: $(drivers_makefiles)
@@ -22,5 +22,5 @@ clean: $(drivers_makefiles)
 
 libdriver:
 	${AR} rcs libdriver.a $(drivers_objects) --target=elf32-i386
-	echo "LD	libdriver.a -> SYSROOT/lib"
+	echo "LD	$(drivers_objects) -> libdriver.a"
 	mv libdriver.a ${JINK_CONFIG_SYSROOT_DIR}/lib/

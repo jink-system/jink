@@ -62,7 +62,12 @@ void vga_putc(char c) {
 
 void vga_write(const char* data, vgasize_t size) {
     for (vgasize_t i = 0; i < size; i++) {
-        vga_putc(data[i]);
+        if (data[i] == '\n') {
+            vga_term_row++;
+            vga_term_column = 0;
+        } else {
+            vga_putc(data[i]);
+        }
     }
 }
 

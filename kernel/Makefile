@@ -2,7 +2,7 @@ include .config
 
 CC=${JINK_CONFIG_COMPILER_CC}
 SYSROOT_DIR=${JINK_CONFIG_SYSROOT_DIR}
-CCFLAGS=-std=gnu99 -ffreestanding -O2 -Wall -Wextra --sysroot=${SYSROOT_DIR} -I${SYSROOT_DIR}/include -ldriver
+CCFLAGS=-std=gnu99 -ffreestanding -O2 -Wall -Wextra --sysroot=${SYSROOT_DIR} -I${SYSROOT_DIR}/include -ldriver -lc -lk
 SRCDIR=./kernel/
 OBJDIR=./kernel/
 CSOURCES=$(wildcard $(SRCDIR)/*.c)

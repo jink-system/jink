@@ -5,7 +5,7 @@
 # VGA Driver
 mkdir -p sysroot/include/drivers/video/vga/
 
-# PCSpeaker Driver (not implemented)
+# PCSpeaker Driver
 mkdir -p sysroot/include/drivers/audio/pcspeaker/
 
 ### Library ###
@@ -13,11 +13,11 @@ mkdir -p sysroot/include/drivers/audio/pcspeaker/
 # Basics
 mkdir -p sysroot/lib
 
-# Kernel Library (not implemented)
+# Kernel Library
 mkdir -p sysroot/include/kernel/
 
 # C Standard Libary
-# not needed
+# not needed (sysroot/include)
 
 ### Kernel ###
 

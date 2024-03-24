@@ -1,4 +1,8 @@
 # Bootloader directory
 
-In this directory there are all the bootloader available for jink.
-If you want to add more bootloader, just add the config here and edit .iso.sh file.
+In this directory you found some bootloader config file.
+Useful if you want to make '.iso' or '.img' or what you want
+
+- Make an ISO with grub/
+	- Enter this command in this directory:
+		`grub-mkrescue ./grub -o jink.iso
